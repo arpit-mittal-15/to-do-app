@@ -8,18 +8,26 @@
   <title>To-do app</title>
 </head>
 <body>
-  <div id="add-search">
-    <input type="text" id="new-task">
+  <div class="body-child" id="add-search">
+    <div id="heading">
+      <div id="title">To-do App</div>
+      <button class="light" id="theme" onclick="changeTheme()">
+        <svg height="20" width="20" viewBox="0 0 512 512">
+          <path d="M448 256c0-106-86-192-192-192V448c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"/>
+        </svg>
+      </button>
+    </div>
+    <input type="text" id="new-task" placeholder="Write your task name here...">
     <select name="priority" id="priority">
       <option value="high-priority">High Priority</option>
       <option value="medium-priority">Medium Priority</option>
       <option value="low-priority">Low Priority</option>
     </select>
-    <button onclick="addTask()">Add</button>
+    <button id="add-button" onclick="addTask()">Add</button>
   </div>
-  <div id="list">
-    <ul id="to-do">
-    </ul>
+  <div class="body-child" id="list"></div>
+  <div id="delete-all-area">
+    <button id="delete-all" onclick="deleteAll()">Delete Completed Tasks</button>
   </div>
 </body>
 </html>
