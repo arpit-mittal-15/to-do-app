@@ -122,22 +122,26 @@ function checkboxFunc(num){
   if(box.checked){
     listItem.style.opacity = "0.4";
     task.style.textDecoration ="line-through";
-    listItem.classList.add = "completed";
+    listItem.classList.add("completed");
   }
   else{
     listItem.style.opacity = "1";
     task.style.textDecoration ="none";
-    listItem.classList.remove = "completed";
+    listItem.classList.remove("completed");
   }
 };
 
 function deleteAll(){
-  alert("helllo")
+  
   let completedTasks = document.getElementsByClassName("completed");
   let completed = completedTasks.length;
+  if(confirm(`delete ${completed} tasks?`)){
+    for(i=completed-1; i>=0; i--){
+      completedTasks[i].parentNode.removeChild(completedTasks[i]);
+    };
+  };
+};
 
-  for(i=0; i<completed; i++){
-    let listItem = completedTasks[i];
-    completedTasks.parentNode.removeChild(listItem);
-  }
+function resetAll(){
+  document.getElementById("list").innerHTML = "";
 }
