@@ -1,0 +1,77 @@
+body{
+  height: 99vh;
+  width: 99vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 19vh 78vh;
+  overflow: hidden;
+  gap: 10px;
+  background-color: aqua;
+}
+body > div{
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  border-radius: 20px;
+  background-color: white;
+}
+#add-search{
+  box-sizing: border-box;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: auto 20% 10%;
+  grid-template-rows: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+#new-task{
+  width: 90%;
+  height: 30px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid rgb(73, 73, 73);
+}
+#new-task:focus{
+  border: 1px solid;
+}
+#priority{
+  appearance: menu;
+  width: 90%;
+  height: 30px;
+  background-color: white;
+}
+#list{
+  overflow: scroll;
+}
+#list > .list-item{
+  height: 60px;
+  width: 98%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 5% 60% 20% 10%;
+  grid-template-rows: 1fr;
+  align-items: center;
+  justify-items: center;
+  text-align: left;
+  font-size: 20px;
+  border-bottom: 1px solid grey;
+}
+.list-item > input{
+  height: 20px;
+  width: 20px;
+}
+.task-name{
+  width: 90%;
+}
+.task-priority{
+  width: 90%;
+}
+.red{
+  color: red;
+}
+.yellow{
+  color: rgb(209, 209, 0);
+}
+.green{
+  color: rgb(0, 194, 0)
+}

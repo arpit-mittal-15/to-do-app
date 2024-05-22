@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <title>To-do app</title>
+</head>
+<body>
+  <div id="add-search">
+    <input type="text" id="new-task">
+    <select name="priority" id="priority">
+      <option value="high-priority">High Priority</option>
+      <option value="medium-priority">Medium Priority</option>
+      <option value="low-priority">Low Priority</option>
+    </select>
+    <button onclick="addTask()">Add</button>
+  </div>
+  <div id="list">
+    <ul id="to-do">
+    </ul>
+  </div>
+</body>
+</html>
